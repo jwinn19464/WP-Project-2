@@ -229,7 +229,10 @@ if(isset($_GET['kp'])){
                 </form>
             </div>
         </div>
-
+        <div class="cta-buttons">
+        <a href="leaderboard.php" class="cta-button">
+            Leaderboard
+        </a>
         <div class="current-guesses">
             <?php
             $guess = getCurrentWord();
