@@ -6,6 +6,7 @@ body {
     background-position: 0 0px;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 
 header {
@@ -65,8 +66,20 @@ h1, h2, h3 {
 .centered h1{
     color: #fff;
 }
+.centered li{
+    text-align: center;
+}
 p {
     color: #fff;
+}
+ol {
+    list-style-position: inside; /* Ensures the numbers are within the list */
+    text-align: center; /* Centers the content, including the numbers */
+    padding-right: 50px;
+}
+
+ol li {
+    text-align: left; /* Aligns the text within list items to the left */
 }
 /* signup sumbit */
 body {
@@ -77,6 +90,7 @@ body {
     background-position: 0 0px;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 
 /* Additional Styles for Success Message */
@@ -129,6 +143,7 @@ body {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: 0 0px;
+    overflow: auto;
 }
 .main-app {
     margin: 0 auto;
@@ -145,6 +160,7 @@ body {
     display: inline-block;
     width: 500px;
     background: #fff;
+    overflow: auto;
 }
 .hangman-image {
     width: 80%;
@@ -164,6 +180,7 @@ body {
     float: right;
     display: inline;
     vertical-align: top;
+    overflow: auto;
 }
 .letter-buttons button {
     margin-right: 5px;
@@ -212,6 +229,7 @@ form {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(89, 171, 196, 0.1);
+    overflow: auto;
 }
 
 label {
@@ -227,6 +245,7 @@ input {
     margin-right: auto;
     border: 1px solid rgb(46, 101, 211);
     border-radius: 5px;
+    overflow: auto;
 }
 
 button {
@@ -251,7 +270,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -261,6 +280,7 @@ footer {
 #contact,
 #about {
     margin-top: 40px;
+    overflow: auto;
 }
 
 #contact h2,
