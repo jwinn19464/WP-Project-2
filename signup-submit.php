@@ -3,18 +3,23 @@
 $errors = array();
 $user = array(
     'name' => '',
-    'gender' => '',
-    'age' => '',
     'username' => '',
     'password' => '',
 );
 
 $name = $_POST['name'];
-$gender = $_POST['gender'];
-$age = $_POST['age'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+if(empty($name)){
+    $errors[] = "Name cannot be empty.";
+}
+if(empty($username)){
+    $errors[] = "Username cannot be empty.";
+}
+if(empty($password)){
+    $errors[] = "Password cannot be empty.";
+}
 if (empty($errors)) {
     $existingUsernames = array();
     $file = file("users.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -45,12 +50,7 @@ if (empty($errors)) {
 if(isset($name)) {
     $user['name'] = urlencode($name);
 }
-if(isset($gender)) {
-    $user['gender'] = urlencode($gender);
-}
-if(isset($age)) {
-    $user['age'] = urlencode($age);
-}
+
 if(isset($username)) {
     $user['username'] = urlencode($username);
 }
@@ -68,9 +68,9 @@ for ($i = 0; $i < count($words); $i++) {
         break;
     }
 }
-if (!is_numeric($user["age"])) {
-    $errors[] = "Age is not a number.";
-}
+// if (!is_numeric($user["age"])) {
+//     $errors[] = "Age is not a number.";
+// }
 
 ?>
 <div class="container">
